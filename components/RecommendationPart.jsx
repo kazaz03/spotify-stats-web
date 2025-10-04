@@ -7,8 +7,16 @@ export default function RecommendationPart() {
     <div className="recommendation-container">
       <h2 style={{ color: "#1db954" }}>Recommended For You</h2>
       <div className="recommendation-elements">
-        <RecommendationElement icon={FaMusic} />
-        <RecommendationElement icon={FaPodcast} />
+        <RecommendationElement
+          icon={FaMusic}
+          title="Songs Mix"
+          description="Based on your latest listened songs"
+        />
+        <RecommendationElement
+          icon={FaPodcast}
+          title="Podcasts Mix"
+          description="Based on your latest listened podcasts"
+        />
       </div>
     </div>
   );
