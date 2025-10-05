@@ -435,6 +435,92 @@ a {
   margin-bottom: 0;
 }
 
+.music-page-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.music-page-title h1 {
+  color: #1db954;
+}
+
+.music-page-title p {
+  color: rgb(180, 178, 178);
+  margin-top: 0;
+}
+
+.top-nav-el-link {
+  color: rgb(180, 178, 178);
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.top-nav-el:hover .top-nav-el-link:not(.active-link) {
+  color: #1db954;
+  cursor: pointer;
+}
+
+.top-nav-el-link.active-link {
+  color: black;
+}
+
+.top-nav-el {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 0;
+  border-radius: 5px;
+  padding: 10px 25px;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 30px;
+}
+
+.top-nav-el.active-el {
+  background-color: #1db954;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.top-choice-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 1px;
+  background-color: rgb(33, 33, 33);
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.filter-buttons-container {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.filter-button {
+  font-size: 1rem;
+  border-radius: 30px;
+  padding: 6px 30px;
+  color: rgb(180, 178, 178);
+  background: rgb(33, 33, 33);
+  cursor: pointer;
+  border: none;
+}
+
+.filter-button:hover {
+  color: #1db954;
+  background: rgb(56, 56, 56);
+}
+
+.selected-filter-button {
+  background: #1db954;
+  color: #000000;
+}
+
+.selected-filter-button:hover {
+  background: #1db954;
+  color: #000;
+}
+
 @media (max-width: 768px) {
   .site-wrapper {
     flex-direction: column;

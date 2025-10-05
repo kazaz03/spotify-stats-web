@@ -8,7 +8,9 @@ import Layout from "../components/Layout.jsx";
 import Profile from "../pages/Profile.jsx";
 import Settings from "../pages/Settings.jsx";
 import Music from "../pages/Music.jsx";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import TopTracks from "../pages/TopTracks.jsx";
+import TopArtists from "../pages/TopArtists.jsx";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -17,7 +19,14 @@ createRoot(document.getElementById("root")).render(
         <Route path="/" element={<App />} />
         <Route path="/home" element={<Home />} />
         <Route path="/top" element={<Top />} />
-        <Route path="/music" element={<Music />} />
+        <Route path="/music" element={<Music />}>
+          <Route
+            index
+            element={<Navigate to="toptracks?time=week" replace />}
+          />
+          <Route path="toptracks" element={<TopTracks />} />
+          <Route path="topartists" element={<TopArtists />} />
+        </Route>
         <Route path="/profile" element={<Profile />} />
         <Route path="/settings" element={<Settings />} />
       </Route>
