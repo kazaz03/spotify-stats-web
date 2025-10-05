@@ -1,8 +1,10 @@
 import { NavLink } from "react-router-dom";
 import { FaCircle } from "react-icons/fa";
+import useWindowWidth from "../src/hooks/useWindowWidth";
 
 export default function NavItem({ path, icon: IconComponent, name }) {
   const shouldApplyEnd = path === "/home";
+  const width = useWindowWidth();
   return (
     <NavLink to={path} end={shouldApplyEnd}>
       {({ isActive }) => (
@@ -12,10 +14,14 @@ export default function NavItem({ path, icon: IconComponent, name }) {
               className={`nav-el-icon ${isActive ? "active-icon" : ""}`}
             />
           </div>
-          <span className={`nav-el-link ${isActive ? "active-link" : ""}`}>
-            {name}
-          </span>
-          {isActive ? <FaCircle className="active-el-circle" /> : null}
+          {width > 768 && (
+            <>
+              <span className={`nav-el-link ${isActive ? "active-link" : ""}`}>
+                {name}
+              </span>
+              {isActive ? <FaCircle className="active-el-circle" /> : null}
+            </>
+          )}
         </div>
       )}
     </NavLink>

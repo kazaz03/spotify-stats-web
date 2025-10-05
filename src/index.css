@@ -434,3 +434,15 @@ a {
   margin-top: 0;
   margin-bottom: 0;
 }
+
+@media (max-width: 768px) {
+  .site-wrapper {
+    flex-direction: column;
+  }
+  .sidebar {
+    flex-direction: row;
+  }
+  .sidebar-nav {
+    flex-direction: row;
+  }
+}
