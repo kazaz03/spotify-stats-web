@@ -6,6 +6,7 @@ export default function TopTracks() {
   //hardkodirani podaci - jos uvijek nisu prilagodjeni api i bekendu
   const topTracks = [
     {
+      id: 1,
       rank: 1,
       title: "Blinding Lights",
       artist: "The Weeknd",
@@ -16,6 +17,7 @@ export default function TopTracks() {
       trend: "up",
     },
     {
+      id: 2,
       rank: 2,
       title: "Watermelon Sugar",
       artist: "Harry Styles",
@@ -26,6 +28,7 @@ export default function TopTracks() {
       trend: "same",
     },
     {
+      id: 3,
       rank: 3,
       title: "Levitating",
       artist: "Dua Lipa",
@@ -36,6 +39,7 @@ export default function TopTracks() {
       trend: "up",
     },
     {
+      id: 4,
       rank: 4,
       title: "Good 4 U",
       artist: "Olivia Rodrigo",
@@ -46,6 +50,7 @@ export default function TopTracks() {
       trend: "down",
     },
     {
+      id: 5,
       rank: 5,
       title: "Stay",
       artist: "The Kid LAROI, Justin Bieber",
@@ -64,7 +69,11 @@ export default function TopTracks() {
         <FaChartColumn style={{ color: "#1db954", fontSize: "30px" }} />
         <h2 style={{ color: "white" }}>Your most listened to tracks</h2>
       </div>
-      <div className="top-tracks-elements"></div>
+      <div className="top-tracks-elements">
+        {topTracks.map((item) => {
+          return <TopTrackElement key={item.id} element={item} />;
+        })}
+      </div>
     </div>
   );
 }

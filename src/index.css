@@ -570,3 +570,101 @@ a {
     grid-template-rows: 1fr 1fr;
   }
 }
+
+.top-track-element {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(33, 32, 32);
+  margin-top: 20px;
+  border-radius: 15px;
+  width: 100%;
+  box-shadow: 0 0 2px 0.2px #1db954;
+  align-items: center;
+  padding: 20px 30px;
+  justify-content: space-between;
+  cursor: pointer;
+  min-width: 650px;
+}
+
+.top-track-info-left-side {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+
+.rank-info {
+  background: #1db954;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.top-track-pic-container {
+  box-shadow: 0 0 2px 0.2px #1db954;
+  border-radius: 10px;
+}
+
+.top-track-main-info h3 {
+  color: white;
+  margin: 5px;
+}
+
+.top-track-main-info p {
+  margin: 5px;
+}
+
+.top-track-main-info .top-track-album {
+  color: rgb(180, 178, 178);
+}
+
+.top-track-info-right-side {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  min-width: 150px;
+}
+
+.top-track-listens {
+  text-align: center;
+}
+
+.top-track-listens p {
+  margin: 5px;
+}
+
+.top-track-listens .number {
+  color: #1db954;
+}
+
+.top-track-mood p {
+  color: rgb(205, 205, 205);
+  margin: 5px;
+}
+
+.top-track-mood {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 150px;
+  justify-content: center;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+  background-color: rgb(61, 61, 61);
+}
+
+.top-track-duration {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.top-track-duration p {
+  color: rgb(189, 186, 186);
+}
