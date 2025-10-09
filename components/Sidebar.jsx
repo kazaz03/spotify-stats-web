@@ -21,7 +21,7 @@ export default function Sidebar() {
       <nav className="sidebar-nav">
         <NavItem path="/home" icon={FaHome} name="Home" />
         <NavItem path="/music" icon={FaItunesNote} name="Music" />
-        <NavItem path="/top" icon={FaHeadphonesAlt} name="Podcasts" />
+        <NavItem path="/podcast" icon={FaHeadphonesAlt} name="Podcasts" />
         <NavItem path="/profile" icon={FaRegUser} name="Profile" />
       </nav>
       <SidebarBottomNav />
